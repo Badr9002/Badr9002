@@ -1,0 +1,19 @@
+// Create a DNS configuration
+
+import NetworkExtension
+
+NEDNSSettingsManager.shared().loadFromPreferences { loadError in
+    if let loadError = loadError {
+        // ...handle error...
+        return
+    }
+    let dohSettings = NEDNSOverHTTPSSettings(servers: [ "2001:db8::2" ])
+    dohSettings.serverURL = URL(string: "https://dnsserver.example.net/dns-query")
+    NEDNSSettingsManager.shared().dnsSettings = dohSettings
+    NEDNSSettingsManager.shared().saveToPreferences { saveError in
+        if let saveError = saveError {
+            // ...handle error...
+            return
+        }
+    }
+}
