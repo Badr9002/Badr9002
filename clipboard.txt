@@ -1,0 +1,4 @@
+// Use the class method to submit score to one or more leaderboards at once
+GKLeaderboard.submitScore(self.points, context: 0, player: GKLocalPlayer.local,
+    leaderboardIDs: ["my.leaderboard.id"]) { error in
+}
