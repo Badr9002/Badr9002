@@ -1,2 +1,0 @@
-Jun 09 07:23:38: Testing with directory ''
-Jun 09 07:23:38 Error: Connection test failed: Error Domain=HostnameLookupError Code=8 "Unable to lookup callback" UserInfo={NSLocalizedDescription=Unable to lookup callback, host=callback, connectivity=true}
